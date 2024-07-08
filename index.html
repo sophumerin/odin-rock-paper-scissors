@@ -89,6 +89,7 @@
         computerScore = 0;
         humanScore = 0;
         for(i = 5; i  > 0; i--){
+            // end early if a player cannot overcome a deficit to at least tie
             if(Math.abs(computerScore - humanScore) > i){
                 break;
             }
