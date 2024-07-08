@@ -15,5 +15,25 @@
         const options = ["rock", "paper", "scissors"];
         return options[Math.floor(Math.random()*options.length)];
     }
+
+    function getHumanChoice() {
+        let choice = prompt("Enter rock, paper, or scissors:");
+        if (typeof(choice) !== 'string'){
+            return getHumanChoice();
+        }
+        if (typeof(choice.length) === 0) {
+            return getHumanChoice();
+        }
+        if (choice[0].toLowerCase() === 'r'){
+            return 'rock';
+        }
+        if (choice[0].toLowerCase() === 'p'){
+            return 'paper';
+        }
+        if (choice[0].toLowerCase() === 's'){
+            return 'scissors';
+        }
+        return getHumanChoice();
+    }
 </script>
 </html>
